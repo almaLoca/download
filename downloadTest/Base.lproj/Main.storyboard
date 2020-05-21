@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="downloadTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E8S-AW-t1o">
+                                <rect key="frame" x="130.5" y="318.5" width="114" height="30"/>
+                                <state key="normal" title="Download Doc"/>
+                                <connections>
+                                    <action selector="btn_down_doc_act:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UEu-Ac-hR0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fQC-Sk-p15">
+                                <rect key="frame" x="130.5" y="388" width="114" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="114" id="BcI-VX-xPI"/>
+                                    <constraint firstAttribute="height" constant="30" id="hTL-xo-e81"/>
+                                </constraints>
+                                <state key="normal" title="Download Image"/>
+                                <connections>
+                                    <action selector="btn_down_img_act:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hf4-fs-b3c"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uqW-iv-4sc">
+                                <rect key="frame" x="67.5" y="69" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="XyO-kY-NsT"/>
+                                    <constraint firstAttribute="width" constant="240" id="wKz-EZ-MRR"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="fQC-Sk-p15" firstAttribute="top" secondItem="E8S-AW-t1o" secondAttribute="bottom" constant="39.5" id="AYw-qY-SN9"/>
+                            <constraint firstItem="E8S-AW-t1o" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="C2m-dC-Kp8"/>
+                            <constraint firstItem="fQC-Sk-p15" firstAttribute="centerX" secondItem="E8S-AW-t1o" secondAttribute="centerX" id="Gy3-sO-qLL"/>
+                            <constraint firstItem="uqW-iv-4sc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="69" id="Kti-rT-Fhu"/>
+                            <constraint firstItem="E8S-AW-t1o" firstAttribute="height" secondItem="fQC-Sk-p15" secondAttribute="height" id="e1K-8t-BLu"/>
+                            <constraint firstItem="uqW-iv-4sc" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="oCt-dq-qh4"/>
+                            <constraint firstItem="E8S-AW-t1o" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="pxv-Df-PUe"/>
+                            <constraint firstItem="E8S-AW-t1o" firstAttribute="width" secondItem="fQC-Sk-p15" secondAttribute="width" id="v4f-NO-AeZ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="img_out" destination="uqW-iv-4sc" id="d8z-i8-YZV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="110"/>
+        </scene>
+    </scenes>
+</document>
